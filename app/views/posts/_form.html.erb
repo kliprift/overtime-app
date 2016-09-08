@@ -1,0 +1,10 @@
+<%= form_for @post do |f| %>
+	<%= f.label :date, "Date" %> <br>
+	<%= f.date_select :date %> <br>
+
+
+<%= f.label :rationale, "Rationale" %> <br>
+	<%= f.text_area :rationale, placeholder:"Please state your reason", :rows => 5, :cols => 100  %> <br>
+	<%= f.submit 'Save' %><br>
+
+<% end %>
