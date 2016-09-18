@@ -2,6 +2,7 @@ class PostsController < ApplicationController
   before_action :find_id, except: [:index, :new, :show, :create]
 
   def index
+    @posts = Post.all.limit(5).order("created_at DESC")
   end
 
   def show
