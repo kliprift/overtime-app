@@ -1,11 +1,13 @@
 FactoryGirl.define do
   factory :post do
     date Date.today
-    rational "Some Rationale"
+    rationale "Some Rationale"
+    user
   end
 
   factory :second_post, class: "Post" do
     date Date.yesterday 
-    rational "Some Rationale 2"
+    rationale "Some Rationale 2"
+    user
   end
 end
